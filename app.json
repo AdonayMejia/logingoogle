@@ -1,32 +1,11 @@
 {
   "expo": {
-    "name": "smelly-toffee",
-    "slug": "snack-c3fcb4e6-698b-455c-8cc7-52a7404af615",
+    "name": "mi-nueva-app",
+    "slug": "mi-nueva-app",
     "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
     "assetBundlePatterns": [
       "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
-  }
+    ]
+  },
+  "name": "mi-nueva-app"
 }
