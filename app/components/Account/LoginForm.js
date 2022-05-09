@@ -2,13 +2,10 @@ import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Input, Icon, Button } from 'react-native-elements';
 import Loading from "../Loading";
-import GoogleButton from 'react-google-button';
 import {isEmpty} from "lodash";
 import { useNavigation } from '@react-navigation/native';
 import * as firebase from "firebase";
 import {validateEmail} from "../../utils/validations";
-
-
 
 
 export default function LogingForm(props) {
@@ -17,8 +14,6 @@ export default function LogingForm(props) {
   const [formData, setFormData] = useState(defaultFormValue());
   const [loading, setLoading]= useState(false);
   const navigation = useNavigation();
-  
- 
 
 
   const onChange = (e, type) => {
@@ -45,32 +40,6 @@ export default function LogingForm(props) {
       })
     }
   };
-
-  const prueba = () =>{
- var provider = new firebase.auth.GoogleAuthProvider();
- firebase.auth().languageCode = 'it';
- firebase.auth()
-  .signInWithPopup(provider)
-  .then((result) => {
-    /** @type {firebase.auth.OAuthCredential} */
-    var credential = result.credential;
-
-    // This gives you a Google Access Token. You can use it to access the Google API.
-    var token = credential.accessToken;
-    // The signed-in user info.
-    var user = result.user;
-    // ...
-  }).catch((error) => {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // The email of the user's account used.
-    var email = error.email;
-    // The firebase.auth.AuthCredential type that was used.
-    var credential = error.credential;
-    // ...
-  });
-  }
   return (
     <View style={styles.formContainer}>
       <Input
@@ -106,15 +75,8 @@ export default function LogingForm(props) {
         buttonStyle={styles.btnLogin}
         onPress={onSubmit}
       />
-   
        <Loading isVisible={loading} text="Iniciando Sesion"/>
-       <View>
-       <GoogleButton
-  onClick={() => { console.log('Google button clicked') }}
-/>
-       </View>
     </View>
-  
   );
 }
 

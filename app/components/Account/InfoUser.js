@@ -3,7 +3,6 @@ import {StyleSheet,View, Text} from 'react-native';
 import {Avatar} from "react-native-elements";
 import * as firebase from "firebase";
 import { Camera } from 'expo-camera';
-import { GoogleSignin } from '@react-native-google-signin/google-signin';
 //import * as Permissions from "expo-permissions";
 import * as ImagePicker from "expo-image-picker";
 
